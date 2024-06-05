@@ -9,6 +9,7 @@ import gui.FrameFormulario;
 import gui.FrameImagen;
 import herencia.Alumno;
 import herencia.Persona;
+import herramientas.GestorImagen;
 
 import java.awt.GridLayout;
 
@@ -20,8 +21,8 @@ public class App {
     //  estado del combo cambie (selección de lo elementos que tiene) 
     // obtener la imagen
     
-    
-    FrameImagen aux = new FrameImagen(null);
+    GestorImagen aux = new GestorImagen();
+    aux.abrirImagen();
         
     }
 }

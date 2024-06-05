@@ -6,6 +6,7 @@ import javax.swing.JOptionPane;
 import escuchadores.EscuchadorBoton;
 import gui.FrameCombo;
 import gui.FrameFormulario;
+import gui.FrameImagen;
 import herencia.Alumno;
 import herencia.Persona;
 
@@ -17,7 +18,10 @@ public class App {
      
     //  Combo Box  =  "JComboBox"  Constructores(4) (api oracle) | Object,Component, Container, J
     //  estado del combo cambie (selección de lo elementos que tiene) 
-    FrameCombo aux = new FrameCombo();
+    // obtener la imagen
+    
+    
+    FrameImagen aux = new FrameImagen(null);
         
     }
 }

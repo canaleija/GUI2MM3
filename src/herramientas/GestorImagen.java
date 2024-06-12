@@ -37,7 +37,7 @@ public class GestorImagen {
             
             File archivo = selector.getSelectedFile();
             
-            BufferedImage bi;
+            BufferedImage bi = null;
             try {
                 bi = ImageIO.read(archivo);
             } catch (IOException e) {

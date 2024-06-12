@@ -2,6 +2,8 @@ package gui;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+
+import java.awt.GridLayout;
 import java.awt.Image;
 
 public class FrameImagen extends javax.swing.JFrame {
@@ -17,6 +19,7 @@ public class FrameImagen extends javax.swing.JFrame {
         this.etiquetaImagen =
          new JLabel(new ImageIcon(this.imagen));
         
+        setLayout(new GridLayout()); 
         // agregar al frame la etiqueta
         add(this.etiquetaImagen);
         setSize(400,400);

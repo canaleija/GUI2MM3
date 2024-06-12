@@ -2,6 +2,7 @@ package herramientas;
 
 import java.awt.Image;
 import java.io.File;
+import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
@@ -36,7 +37,13 @@ public class GestorImagen {
             
             File archivo = selector.getSelectedFile();
             
-            BufferedImage bi = ImageIO.read(archivo);
+            BufferedImage bi;
+            try {
+                bi = ImageIO.read(archivo);
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
             
             return toImage(bi);
 

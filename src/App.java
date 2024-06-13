@@ -10,6 +10,7 @@ import gui.FrameImagen;
 import herencia.Alumno;
 import herencia.Persona;
 import herramientas.GestorImagen;
+import herramientas.ModificacionImagenes;
 
 import java.awt.GridLayout;
 import java.awt.Image;
@@ -28,6 +29,14 @@ public class App {
     Image imagen = aux.abrirImagen();
     // creamos un frame especial para mostrar la imagen    
     FrameImagen fi = new FrameImagen(imagen);
+
+    ModificacionImagenes mi = new ModificacionImagenes();
+    Image nueva = mi.modificarColor(imagen);
+
+
+    FrameImagen fi2 = new FrameImagen(nueva);
+    // verde: 38,255,0
+    // amarillo: 239,196-226,60-90
 
     }
 }

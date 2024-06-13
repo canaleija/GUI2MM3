@@ -1,5 +1,6 @@
 package herramientas;
 
+import java.awt.Graphics2D;
 import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
@@ -52,6 +53,18 @@ public class GestorImagen {
 
     public  Image toImage (BufferedImage bi){
         return bi.getScaledInstance(bi.getWidth(),bi.getHeight(), BufferedImage.TYPE_INT_RGB);
+    }
+
+    public static BufferedImage toBufferedImage (Image imagen){
+
+        BufferedImage bi = 
+                new BufferedImage(imagen.getWidth(null), imagen.getHeight(null), BufferedImage.TYPE_INT_RGB);
+        
+        Graphics2D nueva = bi.createGraphics();
+        nueva.drawImage(imagen, 0, 0,null);
+        nueva.dispose();
+        
+        return bi;
     }
     
 }

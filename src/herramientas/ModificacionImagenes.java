@@ -37,4 +37,10 @@ public Image modificarColor (Image imagenOriginal){
 }
 
 
+public Image generarImagenEnGrises(Image imagenOriginal){
+
+    
+}
+
+
 }

@@ -22,6 +22,9 @@ public class App {
 
         Contador aux = new Contador("c1", 100, 5);
         aux.contar();
+
+        Contador aux2 = new Contador("c2", 50, 7);
+        aux2.contar();
      
     }
 }

@@ -1,6 +1,6 @@
 package paralelosockets;
 
-public class Contador {
+public class Contador implements Runnable{
 
 
     private int n;
@@ -14,6 +14,13 @@ public class Contador {
     }
 
     public void contar (){
+        // crear el hilo 
+        Thread hilo = new Thread(this);
+        hilo.start();
+    }
+
+    @Override
+    public void run() {
         for(int x=0; x<=this.n; x+=j){
             System.out.println(this.nombre+": "+x);
         }

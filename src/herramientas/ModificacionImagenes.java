@@ -38,8 +38,32 @@ public Image modificarColor (Image imagenOriginal){
 
 
 public Image generarImagenEnGrises(Image imagenOriginal){
+    GestorImagen aux = new GestorImagen();
 
+    // obtener el buffer para poder crear una imagen nueva
+    BufferedImage bi = aux.toBufferedImage(imagenOriginal);
+   
+    Color color;
+    // posicionarnos en cada uno de los pixeles de imagen
+    for(int x=0; x<bi.getWidth();x++ ){
+        for(int y=0; y < bi.getHeight();y++){
+            int rgb = bi.getRGB(x,y);
+            color = new Color(rgb);
+            int r = color.getRed();
+            int g = color.getGreen();
+            int b = color.getBlue();
+            
+            // tenemos que calcular el tono en gris
+            // obtenemos con el calculo de un promedio de los tonos en r,g,b
+            int res = (r+g+b)/3;
+            color = new Color(res,res,res);
+                bi.setRGB(x, y, color.getRGB());
+            
+        }
+    }
     
+
+    return aux.toImage(bi);
 }
 
 

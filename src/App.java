@@ -11,6 +11,7 @@ import herencia.Alumno;
 import herencia.Persona;
 import herramientas.GestorImagen;
 import herramientas.ModificacionImagenes;
+import paralelosockets.Contador;
 
 import java.awt.GridLayout;
 import java.awt.Image;
@@ -18,25 +19,9 @@ import java.awt.Image;
 
 public class App {
     public static void main(String[] args) throws Exception {
+
+        Contador aux = new Contador("c1", 100, 5);
+        aux.contar();
      
-    //  Combo Box  =  "JComboBox"  Constructores(4) (api oracle) | Object,Component, Container, J
-    //  estado del combo cambie (selección de lo elementos que tiene) 
-    // obtener la imagen
-    
-    // abrir la imagen por medio del gestor
-    GestorImagen aux = new GestorImagen();
-    // asignamos a variable la imagen abierta
-    Image imagen = aux.abrirImagen();
-    // creamos un frame especial para mostrar la imagen    
-    FrameImagen fi = new FrameImagen(imagen);
-
-    ModificacionImagenes mi = new ModificacionImagenes();
-    Image nueva = mi.modificarColor(imagen);
-
-
-    FrameImagen fi2 = new FrameImagen(nueva);
-    // verde: 38,255,0
-    // amarillo: 239,196-226,60-90
-
     }
 }
